@@ -42,3 +42,7 @@ list2=[4,8,15,23,42]
 print(insertShiftArray(list,5))
 print(insertShiftArray(list2,16))
 print(insertShiftArray([1,2,3],0))
+
+# Welcom message
+if __name__=='__main__':
+    print(" ***** This is Code Challenge :2 this is for array-shift ")
