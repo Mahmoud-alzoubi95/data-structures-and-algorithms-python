@@ -13,4 +13,4 @@ it taked 30 min
 
 ## Solution
 <!-- Embedded whiteboard image -->
-<img src="./assets/challeng1-whiteboard.png">
+<img src="/assets/challeng1-whiteboard.png">

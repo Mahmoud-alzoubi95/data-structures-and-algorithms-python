@@ -15,4 +15,4 @@ it taked 30 min
 
 ## Solution
 <!-- Embedded whiteboard image -->
-<img src="assets/binary-search-ch3.png">
+<img src="/assets/binary-search-ch3.png">
