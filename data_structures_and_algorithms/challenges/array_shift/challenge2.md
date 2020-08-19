@@ -15,4 +15,4 @@ A test was established for this Code challenge
 
 ## Solution
 <!-- Embedded whiteboard image -->
-<img src="../assets/array-shft.png">
+<img src="..../assets/array-shft.png">
