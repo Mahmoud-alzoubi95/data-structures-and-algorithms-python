@@ -11,6 +11,7 @@ class Node():
 class LinkedList():
     def __init__(self):
         self.head=None
+        self.count=0
 
     def append_data(self,data):
         """
@@ -24,12 +25,14 @@ class LinkedList():
             while current.next:
                 current=current.next
             current.next=new_node
+        self.count +=1
 
 
     def insert(self,data):
         new_node=Node(data)
         new_node.next=self.head
         self.head=new_node
+        self.count +=1
 
     def includes(self,data):
         current=self.head
@@ -71,6 +74,7 @@ class LinkedList():
             if before.data==prev_node:
                 new_node.next=before.next
                 before.next=new_node
+                self.count +=1
                 return
             before=before.next
         print("prev_data Does not match any data existance")
@@ -91,11 +95,27 @@ class LinkedList():
             if before.data==data:
                 new_node.next=before
                 old.next=new_node
+                self.count +=1
                 return
             else:
                 old=before
             before=before.next
-                
+
+    def __getitem__(self, k):
+        current=self.head
+        index_to_find=self.count-1- k
+
+        # case 1
+        if self.count==1:
+            return current.data
+        # case 2
+        if index_to_find<=self.count and index_to_find>=0 and k>0:
+            for n in range(index_to_find):
+                current=current.next
+            return current.data
+        else:
+            return "Out Of range"
+
 
             
 
@@ -118,6 +138,8 @@ if __name__=='__main__':
     bird.insertBefore("Haaaaawk","before")
     bird.insertAfter("gty",'newOne')
     print(f""" "{bird}" """)
+    print(bird.count)
+    print(bird[5])
     # bird.includes("awk")
     bird.insert_btw("Hawk","Woody_Packer") # this for handle the error
     
