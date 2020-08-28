@@ -5,17 +5,23 @@ from data_structures_and_algorithms.challenges.linked_list.linked_list import No
 
 
 def merge_list(list1,list2):
+    if not list1:
+        return list2
+    elif not list2:
+        return list1
     merged_list=LinkedList()
 
     current1=list1
-    curren1=current1.head
-    print(current1)
+    current1=current1.head
+    # print(current1)
     current2=list2.head
-    while current1.data and current2.data:
-        if current1.data:
+    # print(current1.data)
+    # print(current2.data)
+    while current1 or current2:
+        if current1:
             merged_list.append_data(current1.data)
             current1=current1.next
-        if current2.data:
+        if current2:
             merged_list.append_data(current2.data)
             current2=current2.next
     return merged_list
@@ -38,9 +44,13 @@ if __name__=='__main__':
     list2.append_data("6")
     list2.append_data("8")
     list2.append_data("9")
+    list2.append_data("10")
+
     a=merge_list(list1,list2)
+    print(a)
     # print(a)
-    print(list1)
+    # print(a)
+    # print(list1)
 
 
     # bird=LinkedList()
