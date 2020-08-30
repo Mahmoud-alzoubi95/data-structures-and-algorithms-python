@@ -34,8 +34,13 @@ class Stack:
         return the top value in the stack
         and delete it the n move the pointer to the next top value
         """
+
         temp=self.top
-        self.top=self.top.next
+        try:
+            self.top=self.top.next
+        except:
+            return "All Nodes have been poped"
+           
         temp.next=None
         return temp.value
         
@@ -163,6 +168,11 @@ if __name__=='__main__':
     stack.push(2)
     stack.push(3)
     stack.push(4)
+    # stack.pop()
+    # stack.pop()
+    # stack.pop()
+    # stack.pop()
+    # stack.pop()
 
     print(stack.pop().__str__())
     print(stack.peek())
