@@ -174,10 +174,10 @@ if __name__=='__main__':
     # stack.pop()
     # stack.pop()
 
-    print(stack.pop().__str__())
-    print(stack.peek())
-    print(stack.is_empty())
-    print(stack)
+    # print(stack.pop().__str__())
+    # print(stack.peek())
+    # print(stack.is_empty())
+    # print(stack)
 
     queue.enqueue("a")
     queue.enqueue("b")
