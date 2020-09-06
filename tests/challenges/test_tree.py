@@ -108,6 +108,16 @@ def test_contain_3(prepare_bst_2):
     actual=bst.contains(-1)
     assert expected==actual
 
+def test_max_value(prepare_bt):
+    """
+    This test to assert the maximum value
+    
+    """
+    bt=prepare_bt
+    expected=13
+    actual=bt.find_maximum_value()
+    assert expected==actual
+    
 
 
 @pytest.fixture
