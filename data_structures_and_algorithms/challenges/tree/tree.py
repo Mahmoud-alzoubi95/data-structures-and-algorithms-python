@@ -84,6 +84,26 @@ class BinaryTree:
         _walk(self.root)
         return self.max
 
+    def breadth_first(self,visited, graph, node):
+        self.visited = [] # List to keep track of visited nodes.
+        self.queue = []     #Initialize a queue
+
+        
+        self.visited.append(node)
+        self.queue.append(node)
+        output=''
+        while self.queue:
+            s = self.queue.pop(0) 
+            # print (s, end = " ") 
+            output+=f"{s} -> "
+
+            for neighbour in graph[s]:
+                if neighbour not in visited:
+                    self.visited.append(neighbour)
+                    self.queue.append(neighbour)
+        return output + " None"
+        # Driver Code
+
 
 
 
@@ -162,5 +182,15 @@ if __name__=='__main__':
     bst.add(42)
     bst.add(27)
     # print(bst.contains(-1))
-    max_value=bt.find_maximum_value()
-    print(max_value)
+    # max_value=bt.find_maximum_value()
+    # print(max_value)
+    graph = {
+    'A' : ['B','C'],
+    'B' : ['D', 'E'],
+    'C' : ['F'],
+    'D' : [],
+    'E' : ['F'],
+    'F' : []
+    }
+    print(bt.breadth_first([],graph, 'A'))
+
