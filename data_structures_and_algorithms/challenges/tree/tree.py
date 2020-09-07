@@ -91,17 +91,17 @@ class BinaryTree:
         
         self.visited.append(node)
         self.queue.append(node)
-        output=''
+        output=[]
         while self.queue:
             s = self.queue.pop(0) 
             # print (s, end = " ") 
-            output+=f"{s} -> "
+            output.append(s)
 
             for neighbour in graph[s]:
                 if neighbour not in visited:
                     self.visited.append(neighbour)
                     self.queue.append(neighbour)
-        return output + " None"
+        return output
         # Driver Code
 
 

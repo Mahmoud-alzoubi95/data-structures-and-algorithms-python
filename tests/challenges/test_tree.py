@@ -121,7 +121,7 @@ def test_max_value(prepare_bt):
 def test_breadth_first_1(prepare_for_breadth_first_1):
     graph=prepare_for_breadth_first_1
     bt=BinaryTree()
-    expected = "A -> B -> C -> D -> E -> F -> F ->  None"
+    expected =['A', 'B', 'C', 'D', 'E', 'F', 'F']
     actual=bt.breadth_first([],graph, 'A')
     assert expected==actual
 
