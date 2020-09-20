@@ -17,3 +17,5 @@ challenge 15   |[link 15](https://github.com/MohammedGhafri/data-structures-and-
 challenge 16   |[link 16](https://github.com/MohammedGhafri/data-structures-and-algorithms-python/blob/master/data_structures_and_algorithms/challenges/tree)
 challenge 17   |[link 17](https://github.com/MohammedGhafri/data-structures-and-algorithms-python/blob/master/data_structures_and_algorithms/challenges/tree)
 challenge 18   |[link 18](https://github.com/MohammedGhafri/data-structures-and-algorithms-python/blob/master/data_structures_and_algorithms/challenges/fizz_buzz_tree)
+challenge 26   |[link 26](https://github.com/MohammedGhafri/data-structures-and-algorithms-python/blob/master/data_structures_and_algorithms/challenges/insertion_sort)
+challenge 18   |[link 18](https://github.com/MohammedGhafri/data-structures-and-algorithms-python/blob/master/data_structures_and_algorithms/challenges/fizz_buzz_tree)
