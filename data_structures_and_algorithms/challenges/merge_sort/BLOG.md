@@ -96,4 +96,4 @@ the elements 42,16,15 will be sorted in the while loop as `[15,16,42]` as illust
 <img src="/assets/merge_sort/Slide8.JPG">
 
 
-the two eralier parts will also be sorted as illustrated in step 15
+the two eralier parts will also be sorted as illustrated in step `15`, **ANd**  the resulting array is **`[4, 8, 15, 16, 23, 42]`**
