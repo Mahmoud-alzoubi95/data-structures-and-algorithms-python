@@ -126,10 +126,20 @@ Then swap 16 with 15
 ## step 10 :
 
 Left sublist contains a single element which means it is sorted. And right sublist contains a single element which means it is sorted.
- Wich means **Done sorting!**
+Which means **Done sorting!**
 
 <img src ="/assets/q_sort/done_sorting.PNG">
 
+
+
+Efficency
+Time: O(n log n)
+The basic operation of this algorithm is comparison. This will happen n * (n-1) number of times…concluding the algorithm to be n squared.
+
+Space: O(1)
+No additional space is being created. This array is being sorted in place…keeping the space at constant O(1).
+
+Worst case : O(n2)
 
 
 
