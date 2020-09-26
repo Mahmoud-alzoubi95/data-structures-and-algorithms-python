@@ -139,7 +139,7 @@ if __name__=='__main__':
     bird.insertAfter("gty",'newOne')
     print(f""" "{bird}" """)
     print(bird.count)
-    print(bird[5])
+    print(bird[2])
     # bird.includes("awk")
     bird.insert_btw("Hawk","Woody_Packer") # this for handle the error
     
