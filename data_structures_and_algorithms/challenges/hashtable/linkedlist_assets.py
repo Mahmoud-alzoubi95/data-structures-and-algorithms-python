@@ -67,7 +67,7 @@ class LinkedList:
         """
         
         current=self.head
-        print("this is current",current)
+        # print("this is current",current)
         # if data[0]==self.name:
         while current:
             
@@ -77,7 +77,7 @@ class LinkedList:
                 return True
             else:
                 current=current.next
-        print("False")
+        # print("False")
         return False
 
 

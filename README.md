@@ -22,5 +22,7 @@ challenge 18   |[link 18](https://github.com/MohammedGhafri/data-structures-and-
 challenge 19   |[link 18](https://github.com/MohammedGhafri/data-structures-and-algorithms-python/blob/master/data_structures_and_algorithms/challenges/fizz_buzz_tree)
 challenge 20   |[link 18](https://github.com/MohammedGhafri/data-structures-and-algorithms-python/blob/master/data_structures_and_algorithms/challenges/fizz_buzz_tree)
 challenge 30   |[link 30](https://github.com/MohammedGhafri/data-structures-and-algorithms-python/blob/master/data_structures_and_algorithms/challenges/hashtable)
+challenge 31   |[link 31](https://github.com/MohammedGhafri/data-structures-and-algorithms-python/blob/master/data_structures_and_algorithms/challenges/repeated_word)
+
 
 
