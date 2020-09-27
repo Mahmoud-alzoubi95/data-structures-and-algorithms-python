@@ -19,6 +19,7 @@ class Hashtable:
         return hashed_total * 7 % self.size
 
     def add(self,key,value):
+        
 
         hashed_key = self.hash(key)
 
@@ -98,6 +99,10 @@ if __name__ == "__main__":
     two=t.hash('ohm')
     a1=t.add('name','moh')
     a2=t.add('name','moh')
+    a2=t.add('name','')
+    # a2=t.add('apple')
+
+
     
 
     # print(t.contains('name'))
