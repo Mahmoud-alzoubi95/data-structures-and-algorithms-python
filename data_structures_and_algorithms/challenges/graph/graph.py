@@ -1,57 +1,108 @@
-from queue import Queue
-
 class Node:
-    def __init__(self, value):
-        self.value = value
-        # self.neighbors = []
+    def __init__(self,data):
+        self.data=data
 
-
-# [
-#     node(val, []),
-#     node(val, []),
-#     node(val, [])
-# ]
-
-# {
-#     node1: [],
-#     node2: [],
-#     ....
-# }
 
 class Graph:
-    def __init__(self):
-        self._adjacency_list = {}
 
-    def add_node(self, value):
-        node = Node(value)
-        # self._adjacency_list.push(node)
-        self._adjacency_list[node] = []
+    def __init__(self,made_up_graph={}):
+        self.adjacency_list=made_up_graph
+        self.edgs={}
 
-    def add_edge(self, start_node, end_node, weight=1):
+    def AddNode(self,data1,data2):
+        node = Node(data1)
+        neighbors_node=Node(data2)
+        
+        def node_add(node,neighbors_node):
+           
+            if node.data in self.adjacency_list.keys():
+                print("appended")
+                self.adjacency_list[node.data].append(neighbors_node.data)
+            else :
+                print("new_add")
+                
+                self.adjacency_list[node.data]=[neighbors_node.data]
+            
+        node_add(node,neighbors_node)
+        node_add(neighbors_node,node)
+
+        return f"A node with {data1} and another node with {data2} was added to the graph"
+        
+    
+    def AddEdge(self,f_node,sec_node,weight=1):
+
+        
+        keys=self.adjacency_list.keys()
+
+            
+        def add_edg(vertex,linked_node,weight):
+            if vertex in self.edgs.keys():
+                self.edgs[vertex].append((linked_node,weight))
+                
+            else:
+                self.edgs[vertex]=[(linked_node,weight)]
+        if f_node in keys and sec_node in keys :
+            """
+            To ensure the keys alraedy exist in graph
+            """
+            if f_node in self.adjacency_list[sec_node]:
+                """
+                To ensure the two nodes are connected together
+                """
+                add_edg(f_node,sec_node,weight)
+                add_edg(sec_node,f_node,weight)
+            return f"Edg was added successfully between {f_node} and {sec_node} with weight = {weight}"
+
+        else:
+            return "either nodes are not connected or one of them not exist in the graph"
+        
+
+    def GetNodes(self):
+       
+        return self.adjacency_list.keys()
+
+
         pass
 
-    def get_nodes(self):
-        return self._adjacency_list.keys()
+    def GetNeighbors(self,node):
+        return self.edgs[node]
 
-    def get_neighbors(self, node):
         pass
 
-    def size(self):
-        pass
+    def Size(self):
+        return len(self.adjacency_list.keys())
+        # pass
 
-    def bfs(self, start_node):
-        q = Queue()
-        q.enqueue(start_node)
-        while len(q):
-            cur = q.dequeue()
-            # mark the node as visited so you don't enqueue(visit) it again
-            print(cur.value)
-            neighbors = self._adjacency_list[cur]
-            for n in neighbors:
-                q.enqueue(n)
-
-    def dfs(self, start_node):
-        pass
 
 if __name__ == "__main__":
-    g = Graph()
+    # g=Graph()
+    # g.AddNode("a","b")
+    # g.AddNode("a","c")
+    # g.AddNode("b","c")    
+    # g.AddEdge("a","c",100)
+    # g.AddEdge("a","b",800)
+    # g.AddEdge("c","b",100)
+    # g.AddEdge("v","b",500)
+    g=Graph()
+    g.AddNode("a","b")
+    g.AddNode("a","c")
+    g.AddNode("a","d")    
+    g.AddNode("b","c")
+    g.AddNode("b","d")  
+    g.AddNode("c","d") 
+    g.AddNode("d","f") 
+
+    g.AddEdge("a","b",800)
+    g.AddEdge("a","c",100)
+    g.AddEdge("a","d",50)
+    g.AddEdge("b","c",25)
+    g.AddEdge("b","d",10)
+    g.AddEdge("c","d",16)
+    g.AddEdge("d","f",17)
+
+
+
+    # print(g.adjacency_list.values())
+    # print(g.Size())
+    # # print(g.edgs)
+    print(g.GetNeighbors("a"))
