@@ -105,4 +105,4 @@ if __name__ == "__main__":
     # print(g.adjacency_list.values())
     # print(g.Size())
     # # print(g.edgs)
-    print(g.GetNeighbors("a"))
+    # print(g.GetNeighbors("a"))
