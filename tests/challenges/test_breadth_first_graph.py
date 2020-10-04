@@ -31,6 +31,7 @@ def test_different_startNode(pre):
     assert expected ==actual
 
 def test_different_startNode_lastNode(pre):
+    
     """
     Test breadth_first method at start node : 'a'
     """
