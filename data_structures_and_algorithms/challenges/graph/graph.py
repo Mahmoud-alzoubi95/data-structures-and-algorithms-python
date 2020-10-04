@@ -6,7 +6,7 @@ class Node:
 class Graph:
 
     def __init__(self,made_up_graph={}):
-        self.adjacency_list=made_up_graph
+        self.adjacency_list=dict()
         self.edgs={}
 
     def AddNode(self,data1,data2):
@@ -84,6 +84,7 @@ if __name__ == "__main__":
     # g.AddEdge("c","b",100)
     # g.AddEdge("v","b",500)
     g=Graph()
+    g1=Graph()
     g.AddNode("a","b")
     g.AddNode("a","c")
     g.AddNode("a","d")    
@@ -91,6 +92,11 @@ if __name__ == "__main__":
     g.AddNode("b","d")  
     g.AddNode("c","d") 
     g.AddNode("d","f") 
+    g1.AddNode("1","2")
+    g1.AddNode("1","3")
+    g1.AddNode("1","4")
+    g1.AddNode("2","3")
+
 
     g.AddEdge("a","b",800)
     g.AddEdge("a","c",100)
@@ -99,7 +105,9 @@ if __name__ == "__main__":
     g.AddEdge("b","d",10)
     g.AddEdge("c","d",16)
     g.AddEdge("d","f",17)
-
+    print(g.adjacency_list)
+    # print(g1.adjacency_list)
+    # print(g.AddEdge("Mohammed","Ghafri",1))
 
 
     # print(g.adjacency_list.values())
