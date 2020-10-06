@@ -68,6 +68,15 @@ class Graph:
         return self.edgs[node]
 
         pass
+    def getweight(self,s_node,l_node):
+        if l_node in self.edgs.keys():
+            print(self.edgs[s_node])
+            for i in self.edgs[s_node]:
+                if l_node == i[0]:
+                    
+                    # print(i[1])
+                    return i[1]
+            pass
 
     def Size(self):
         return len(self.adjacency_list.keys())
@@ -105,7 +114,7 @@ if __name__ == "__main__":
     g.AddEdge("b","d",10)
     g.AddEdge("c","d",16)
     g.AddEdge("d","f",17)
-    print(g.adjacency_list)
+    # print(g.adjacency_list)
     # print(g1.adjacency_list)
     # print(g.AddEdge("Mohammed","Ghafri",1))
 
@@ -114,3 +123,5 @@ if __name__ == "__main__":
     # print(g.Size())
     # # print(g.edgs)
     # print(g.GetNeighbors("a"))
+    print(g.edgs)
+    g.getweight("a","b")
