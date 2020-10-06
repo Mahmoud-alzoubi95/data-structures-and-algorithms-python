@@ -28,7 +28,19 @@ def findMax(root):
 		res = rres 
 	return res 
 
-# Driver Code 
+def find_min(node):
+	if not node:
+		return float("inf")
+	
+	to_check=node.data
+	to_check_left=find_min(node.left)
+	to_check_right=find_min(node.right)
+	if to_check > to_check_left:
+		to_check=to_check_left
+	if to_check > to_check_right:
+		to_check=to_check_right
+	return to_check
+
 if __name__ == '__main__': 
 	root = newNode(2) 
 	root.left	 = newNode(7) 
@@ -41,5 +53,5 @@ if __name__ == '__main__':
 
 	print("Maximum element is", 
 				findMax(root)) 
+	print("MINimum", find_min(root))
 
-# This code is contributed by PranchalK 
