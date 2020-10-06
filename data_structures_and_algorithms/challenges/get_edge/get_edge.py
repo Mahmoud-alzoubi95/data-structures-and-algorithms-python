@@ -4,10 +4,7 @@ from data_structures_and_algorithms.challenges.graph.graph import Graph
 
 def getEdge(self,graph,arr):
     keys=list(graph.adjacency_list.keys())
-    # if arr[0]in keys:
-    #     pass
-    # else:
-    #     return "one of the cities not in the graph/map"
+
     cost=0
     for x,i in enumerate(arr):
         if x+1 == len(arr):
@@ -52,7 +49,7 @@ if __name__ == "__main__":
     g.AddEdge("Metroville","Naboo",26)
     g.AddEdge("New Monstropolis","Naboo",73)
     g.AddEdge("Narnia","Naboo",250)
-
+    print(g.edgs)
     print(g.getEdge(g,['Arendelle', 'New Monstropolis', 'Naboo']))
 
     # print(list(g.adjacency_list.keys()))
