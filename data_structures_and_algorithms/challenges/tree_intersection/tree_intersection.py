@@ -57,7 +57,37 @@ def tree_intersection(root1, root2):
             break
     return arr
 
-    
+def tree_intersection_new(root1,root2):
+    tree1=[]
+    tree2=[]
+    def _walk(t1,t2):
+        if not t1 and not t2:
+            return
+        if t1 :
+            tree1.append(t1.key)
+        if t2:
+            tree2.append(t2.key)
+            # return
+        if not t1 or not t2:
+            return
+        try :
+            _walk(t1.left,t2.left)
+        except:
+            print("error")
+        try :
+            _walk(t1.right,t2.right) 
+        except:
+            print("error")
+        # try :
+        #     _walk(t1.left,t2.left)
+        #     _walk(t1.right,t2.right)    
+        # except:
+        #     print("error")
+        # return 
+    _walk(root1,root2)
+    return tree1,tree2
+        
+
 # def inorder(root): 
 #     if root: 
 #         inorder(root.left) 
@@ -111,7 +141,7 @@ if __name__ == '__main__':
 
 
 
-    print(tree_intersection(root1, root2) )
-
+    # print(tree_intersection(root1, root2) )
+    print(tree_intersection_new(root1,root2))
 
 
