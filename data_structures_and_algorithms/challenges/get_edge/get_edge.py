@@ -1,5 +1,6 @@
-from data_structures_and_algorithms.challenges.graph.graph import Graph
+# from data_structures_and_algorithms.challenges.graph.graph import Graph
 # from data_structures_and_algorithms.challenges.graph.queue import Queue
+from data_structures_and_algorithms.challenges.breadth_first.breadth_first import Graph
 
 
 def getEdge(self,graph,arr):
