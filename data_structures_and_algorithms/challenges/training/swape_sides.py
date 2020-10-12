@@ -16,7 +16,7 @@ class Node:
 
 # A utility function swap left node and right node of tree 
 # of every k'th level 
-@profile(precision=4)
+# @profile(precision=4)
 
 def swapEveryKLevelUtil(root, level, k): 
 	
@@ -68,7 +68,7 @@ root.left.left = Node(4)
 root.right.right = Node(8) 
 root.right.left = Node(7) 
 
-k = 1
+k = 2
 print ("Before swap node :")
 inorder(root) 
 

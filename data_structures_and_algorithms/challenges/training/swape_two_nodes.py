@@ -48,14 +48,20 @@ def swape_two(root,t1,t2):
         if not root:
             return
         if root.data==t1:
-            print(t1)
+            # print(t1)
             output.append(root)
         if root.data==t2:
-            print(t2)
+            # print(t2)
 
             output.append(root)
         if len(output)==2:
-            pass
+            output[0].data, output[1].data = output[1].data,output[0].data
+			# temp=output[0]
+			# output[0]=output[1]
+			# output[1]=temp
+            # print("output is : ",output[0].data)
+
+            
         _walk(root.left,3,8)
         _walk(root.right,3,8)
     # return output[0].data,output[1].data
@@ -97,4 +103,8 @@ k = 1
 # inorder(root) 
 
 # This code is contributed by Nikhil Kumar Singh(nickzuck_007) 
-print(swape_two(root,3,8))
+inorder(root)
+# print(swape_two(root,1,7))
+swape_two(root,7,4)
+inorder(root)
+
